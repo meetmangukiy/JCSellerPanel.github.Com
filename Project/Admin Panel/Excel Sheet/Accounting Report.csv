@@ -1,0 +1,7 @@
+Tax,Type,GST Type,Tax Rate,Invoice NUMBER,Invoice Amount,Total Tax Deduction (Net Tax),GST TCS Amount,Catagory
+GST,Out State,GST_18,18.00%,IN1231ABC,"1,500.00",270,30,Bluthooth Headphone
+GST,Out State,GST_18,18.00%,IN1232ABC,"1,500.00",270,30,Bluthooth Earphone
+GST,Out State,GST_18,18.00%,IN1233ABC,"1,500.00",270,30,Bluthooth Speaker
+GST,IN State,GST_18,18.00%,IN1234ABC,"1,500.00",270,15,Bluthooth Headphone
+GST,IN State,GST_18,18.00%,IN1235ABC,"1,500.00",270,15,Bluthooth Earphone
+GST,IN State,GST_18,18.00%,IN1236ABC,"1,500.00",270,15,Bluthooth Speaker

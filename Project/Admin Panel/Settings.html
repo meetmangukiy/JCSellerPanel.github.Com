@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JC Seller Panel</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="E:\Project/logo.png" alt="Seller Panel" height="60" width="60">
+        </div>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="file:///E:/Project/Admin%20Panel/Admin%20Panel/Amazon.html" class="nav-link">Home</a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group">
+                                    <select class="form-control" id="searchModel" name="data[f]">
+                        						<option value="order">Order</option>
+                        						<option value="sku">Sku</option>
+                                                <option value="shipment">AWB</option>
+                                                <option value="shipment">Return AWB</option>
+                        						<option value="ListingSku">Listing Sku</option>
+                        						<option value="ListingId">Listing ID</option>
+                        						<option value="name">Buyer Name</option>
+                        						<option value="pincode">Buyer Pincode</option>
+                        						<option value="phone">Buyer Phone</option>
+                        					</select>
+                                    <input type="text" class="form-control ui-autocomplete-input" id="searchTerm" placeholder="Search.." required="" name="data[term]" autocomplete="off">
+                                    <span class="input-group-btn">
+                                  <button class="btn btn-success" type="submit">
+                                    <i class="fa fa-search"></i>
+                                  </button>
+
+                                </span>
+                                </div>
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="E:\Project/user.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Seller Panel</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="E:\Project/logo.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">ABCD1234@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Amazon.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Amazon</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/FlipKart.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>FlipKart</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Meesho.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Meesho</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- shopping cart -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="badge badge-info right"></span>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Quick Dispatch Orders.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Quick Dispatch Orders</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Ship Orders.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Ship Orders</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Customer Returns.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Customer Returns</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- barcode -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-barcode"></i>
+                                    <span class="badge badge-info center"></span>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Inventry.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inventry</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Gst Taxes.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Gst Taxes</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Package Types.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Package Types</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Tables -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-table"></i>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Purchase.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Purchase</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Vendor.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Vendor</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Expense.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Expense</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Advertisement.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p> Add Advertisement</p>
+                                    </a>
+                            </ul>
+                            </li>
+
+                            <!-- sitemap -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-sitemap"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Setup New Channel.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Setup New Channel</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Bank Detail Verified.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Bank Detail Verified</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- chart bar -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Sales & Earnings Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Sales & Earnings Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Returns Received Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Returns Received Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Units Sold Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Units Sold Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Payment Recevied.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Payment Recevied</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Payment Outstanding.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Payment Outstanding</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Accounting Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Accounting Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/DTO.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>DTO </p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/RTO.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>RTO</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- upload -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-upload"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Import Data.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Import Data</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/contact-us.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Contact-Us</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Packing Details.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Packing Details</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper ">
+            <!-- Content Header (Page header) -->
+            <div class="content-header ">
+                <div class="container-fluid ">
+                    <div class="row mb-2 ">
+                        <div class="col-sm-6 ">
+                            <h1 class="m-0 ">Settings</h1>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-6 ">
+                            <ol class="breadcrumb float-sm-right ">
+                                <li class="breadcrumb-item "><a href="file:///E:/Project/Admin%20Panel/Admin%20Panel/Amazon.html ">Home</a></li>
+                                <li class="breadcrumb-item active "><a href="E:\Project\Admin Panel\pages\examples/login.html">Log Out</a></li>
+                                <li class="breadcrumb-item active "><a href="E:\Project\Admin Panel/Settings.html">Settings</a></li>
+                            </ol>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="row" style="opacity: 1;">
+                <div class="col-lg-12">
+                    <div class="main-box clearfix">
+                        <div class="main-box-body clearfix">
+                            <form action="" role="form" id="ClientSettingIndexForm" method="post" accept-charset="utf-8">
+                                <div style="display:none;">
+                                    <input type="hidden" name="_method" value="POST">
+                                </div>
+                                <input type="hidden" name="data[ClientSetting][oms_token]" value="2OfnwMdti1UPHK4aFcbGD3rYhEyvqj" id="ClientSettingOmsToken">
+                                <div class="tabs-wrapper">
+                                    <ul class="nav nav-tabs">
+                                        <button>
+                                          <li class="active">
+                                            <a data-toggle="tab" href="#order">Order</a>
+                                          </li>
+                                        </button>
+                                        <button>
+                                          <li>
+                                            <a data-toggle="tab" href="#inventory">Inventory</a>
+                                          </li>
+                                        </button>
+                                        <button>
+                                          <li>
+                                            <a data-toggle="tab" href="#return">Return</a>
+                                          </li>
+                                        </button>
+                                        <button>
+                                          <li>
+                                            <a data-toggle="tab" href="#login">Login</a>
+                                          </li>
+                                        </button>
+                                        <button>
+                                          <li>
+                                            <a data-toggle="tab" href="#Payment">Payment</a>
+                                          </li>
+                                        </button>
+                                    </ul>
+
+                                    <!-- Order -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade in active" id="order">
+                                            <div class="form-group required">
+                                                <label for="ClientSettingEnableBatchProcess">Enable Batch Process</label>
+                                                <span>Select yes, if you would like to manually create a Batch, else No, where system will automatically create batch when you pack orders. Recommended setting: Depends on Seller use case. Default: Yes</span>
+                                                <select name="data[ClientSetting][enable_batch_process]" class="form-control" placeholder="Select yes, if you would like to manually create a Batch, else No, where system will automatically create batch when you pack orders" title="Select yes, if you would like to manually create a Batch, else No, where system will automatically create batch when you pack orders"
+                                                    id="ClientSettingEnableBatchProcess" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingManuallyCloseManifest">Manual Close Self-Ship Manifest</label>
+                                                <span>Select yes, if you would like to manually close manifest, else No, where system will automatically close the manifest when you dispatch self-ship orders. Recommended setting: Depends on Seller use case. Default: Yes</span>
+                                                <select name="data[ClientSetting][manually_close_manifest]" class="form-control" placeholder="Select yes, if you would like to manually close manifest, else No, where system will automatically close the manifest when you dispatch self-ship orders" title="Select yes, if you would like to manually close manifest, else No, where system will automatically close the manifest when you dispatch self-ship orders"
+                                                    id="ClientSettingManuallyCloseManifest" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ClientSettingOptimizeLabels">Split Shipping Labels &amp; Invoice for certain Channels</label>
+                                                <span>Select Yes to split the shipping label and invoice. Recommended setting: Depends on User. (Applicable only for Flipkart, Snapdeal &amp; PayTM). Default: No</span>
+                                                <select name="data[ClientSetting][optimize_labels]" class="form-control" placeholder="Select Yes, if you would like to optimize the labels &amp; invoices for speedy packing" title="Select Yes, if you would like to optimize the labels &amp; invoices for speedy packing"
+                                                    id="ClientSettingOptimizeLabels">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingConfirmDimensionsBeforePack">Confirm Dimensions before Packing Order</label>
+                                                <span>Select No if you want to system to automatically calculate dimensions &amp; weight using the product data entered in the OMSGuru. Default: Confirm for Combo or MultiQty or MultiItem Orders Only.</span>
+                                                <select name="data[ClientSetting][confirm_dimensions_before_pack]" class="form-control" placeholder="Select Yes, if you would like to confirm the dimensions before packing the order" title="Select Yes, if you would like to confirm the dimensions before packing the order"
+                                                    id="ClientSettingConfirmDimensionsBeforePack" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Confirm for Combo or MultiQty or MultiItem Orders Only</option>
+                                                    <option value="2">Confirm for MultiQty or MultiItem Orders Only</option>
+                                                    <option value="3">Confirm for all orders</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingSortDocumentsBy">Sort the Labels By</label>
+                                                <span>Select Invoice Number, if you want to sort documents by Invoice Number, or Select SKU Code, if you want same products to come in order. Default: Courier Name &amp; SKU Code</span>
+                                                <select name="data[ClientSetting][sort_documents_by]" class="form-control" placeholder="Select Invoice Number, if you want to sort documents by Invoice Number, or Select SKU Code, if you want same products to come in order" title="Select Invoice Number, if you want to sort documents by Invoice Number, or Select SKU Code, if you want same products to come in order"
+                                                    id="ClientSettingSortDocumentsBy" required="required">
+                                                    <option value="0">SKU Code</option>
+                                                    <option value="1">Invoice Number</option>
+                                                    <option value="2">Product ID</option>
+                                                    <option value="3">Shipment Tracker AWB</option>
+                                                    <option value="4" selected="selected">Courier Name &amp; SKU Code</option>
+                                                    <option value="5">Channel Order ID</option>
+                                                    <option value="6">Product Name</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingOrderListPageSize">Orders To Fetch Per Page</label>
+                                                <span>Enter the number of orders to fetch per page in New/Packed/ReadyToShip Orders Page ( Min: 10, Max: 300 ). Default: 40</span>
+                                                <input name="data[ClientSetting][order_list_page_size]" class="form-control" placeholder="Enter the number of orders to fetch per page in New/Packed/ReadyToShip Orders Page" title="Enter the number of orders to fetch per page in New/Packed/ReadyToShip Orders Page"
+                                                    type="text" value="300" id="ClientSettingOrderListPageSize" required="required"></div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingSeparateDocumentsByChannel">Separate Documents by Channel</label>
+                                                <span>Select Yes, if you would like to generate separte download files per channel. Recommended setting: Yes. Default: Yes</span>
+                                                <select name="data[ClientSetting][separate_documents_by_channel]" class="form-control" placeholder="Select no, if you do not want to separate documents by channel. You would have to manually separate them later on" title="Select no, if you do not want to separate documents by channel. You would have to manually separate them later on"
+                                                    id="ClientSettingSeparateDocumentsByChannel" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingProcessSelfFulfilledOrders">Process Amazon Self Fulfilled Orders</label>
+                                                <span>Select No, if you DO NOT want to process Amazon self fulfilled orders in our system. Recommended setting: Yes. Default: Yes</span>
+                                                <select name="data[ClientSetting][process_self_fulfilled_orders]" class="form-control" placeholder="Select Yes, if you want to process Amazon self fulfilled orders in our system" title="Select Yes, if you want to process Amazon self fulfilled orders in our system"
+                                                    id="ClientSettingProcessSelfFulfilledOrders" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingManuallyCompletePicklists">Manually Complete Picklists</label>
+                                                <span>Select Yes, if you want to manually close the picklist. Inventory will be removed from Racks only after picklist is mark completed.
+                                                Select No if you want the system will automatically mark picklist as complete and remove the inventory right away from the racks. Recommended setting: Based on seller processes (Default: No)</span>
+                                                <select name="data[ClientSetting][manually_complete_picklists]" class="form-control" placeholder="" title="" id="ClientSettingManuallyCompletePicklists" required="required">
+                                                  <option value="0" selected="selected">No</option>
+                                                  <option value="1">Yes</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingShowSkuTitleInPicklistPrintout">Show SKU Title in Picklist Printout</label>
+                                                <span>If you want to show the SKU title/name in Picklist printout, then select yes. If you do not wish to show the SKU title/name in Picklist printout. Default ( Yes )</span>
+                                                <select name="data[ClientSetting][show_sku_title_in_picklist_printout]" class="form-control" placeholder="" title="" id="ClientSettingShowSkuTitleInPicklistPrintout" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingUsePickupAddressForRetailInvoice">Select which address to use as Company Address on Retail Invoice</label>
+                                                <span>Select PickUp Address if you want to show pickup address as company address on retail invoice, else select company address. Default: Pickup Address</span>
+                                                <select name="data[ClientSetting][use_pickup_address_for_retail_invoice]" class="form-control" placeholder="" title="" id="ClientSettingUsePickupAddressForRetailInvoice" required="required">
+                                                    <option value="0">Company Address</option>
+                                                    <option value="1" selected="selected">PickUp Address</option>
+                                                    <option value="2">Warehouse Address</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingShowComboBreakupOrderList">Show Child Products of Combo in the Order List</label>
+                                                <span>Select No, if you DO NOT want to show the combo breakup in the order list. Default: No</span>
+                                                <select name="data[ClientSetting][show_combo_breakup_order_list]" class="form-control" placeholder="Select Yes, if you want to show combo breakup in the order list" title="Select Yes, if you want to show combo breakup in the order list" id="ClientSettingShowComboBreakupOrderList"
+                                                    required="required">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingShowPortalNameOnRetailInvoice">Show Portal Name on Retail Invoice</label>
+                                                <span>Select No, if you DO NOT want to show Portal name on Retail Invoice generated by our system. Recommended setting: Yes. Default: Yes</span>
+                                                <select name="data[ClientSetting][show_portal_name_on_retail_invoice]" class="form-control" placeholder="Select Yes, if you want to show Portal (Channel) name on Retail Invoice" title="Select Yes, if you want to show Portal (Channel) name on Retail Invoice"
+                                                    id="ClientSettingShowPortalNameOnRetailInvoice" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingShowComboChildSkusOnRetailInvoice">Show Combo Child SKUs on Retail Invoice</label>
+                                                <span>Select No, if you DO NOT want to show Only ChildSku name/sku in a Combo Product on Retail Invoice generated by our system. Recommended setting: Depends on User. Default: Yes</span>
+                                                <select name="data[ClientSetting][show_combo_child_skus_on_retail_invoice]" class="form-control" placeholder="Select Yes, if you want to show the child skus in a Combo Product Purchased along with name/sku on Retail Invoice" title="Select Yes, if you want to show the child skus in a Combo Product Purchased along with name/sku on Retail Invoice"
+                                                    id="ClientSettingShowComboChildSkusOnRetailInvoice" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingShowComboChildPriceBreakupOnRetailInvoice">Show Combo Child Price Breakup on Retail Invoice</label>
+                                                <span>Select No, if you DO NOT want to show Only ChildSku name/sku in a Combo Product on Retail Invoice generated by our system. Recommended setting: Depends on User. Default: No</span>
+                                                <select name="data[ClientSetting][show_combo_child_price_breakup_on_retail_invoice]" class="form-control" placeholder="Select Yes, if you want to show break up of pricing of the child skus in a Combo Product Purchased along with name/sku on Retail Invoice"
+                                                    title="Select Yes, if you want to show break up of pricing of the child skus in a Combo Product Purchased along with name/sku on Retail Invoice" id="ClientSettingShowComboChildPriceBreakupOnRetailInvoice"
+                                                    required="required">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingShowProductImageOnRetailInvoice">Show Product Image on Retail Invoice &amp; PickList</label>
+                                                <span>Select No, if you DO NOT want to show product image on Retail Invoice &amp; Picklist generated by our system. Default setting: No</span>
+                                                <select name="data[ClientSetting][show_product_image_on_retail_invoice]" class="form-control" placeholder="Select Yes, if you want to show product image on Retail Invoice &amp; Picklist" title="Select Yes, if you want to show product image on Retail Invoice &amp; Picklist"
+                                                    id="ClientSettingShowProductImageOnRetailInvoice" required="required">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingShowRateWithGstTax">Show Product Rate including GST TAX on Retail Invoice</label>
+                                                <span>Select No, if you want to show product rates EXCLUDING GST TAX on Retail Invoice. Select Yes, if you want to show product rates INCLUDING GST TAX on retail invoice. Default setting: Yes</span>
+                                                <select name="data[ClientSetting][show_rate_with_gst_tax]" class="form-control" placeholder="Select Yes, if you want to show the product rate including GST TAX on the retail invoice" title="Select Yes, if you want to show the product rate including GST TAX on the retail invoice"
+                                                    id="ClientSettingShowRateWithGstTax" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingShowProductImageOnOrderList">Show Product Image on Order List</label>
+                                                <span>Select No, if you DO NOT want to show product image in the Order List (New/Pack/ReadyToShip Tabs). Default setting: Yes</span>
+                                                <select name="data[ClientSetting][show_product_image_on_order_list]" class="form-control" placeholder="Select Yes, if you want to show product image in the Order List" title="Select Yes, if you want to show product image in the Order List" id="ClientSettingShowProductImageOnOrderList"
+                                                    required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingPackingListSortOrder">Default Sort Order for Packing List</label>
+                                                <span>Packing list in the download document zip file. Default: Sort by SKU Qty</span>
+                                                <select name="data[ClientSetting][packing_list_sort_order]" class="form-control" placeholder="" title="" id="ClientSettingPackingListSortOrder" required="required">
+                                                  <option value="0" selected="selected">Sort by Sku Qty</option>
+                                                  <option value="1">Sort by RackSpace Name</option>
+                                                  <option value="2">Sort by Sku Name - Product Name</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ClientSettingZplShippingLabelPrinter">ZPL Thermal Printer</label>
+                                                <span>Please select one of the printers to print the ZPL labels</span>
+                                                <input name="data[ClientSetting][zpl_shipping_label_printer]" class="form-control" placeholder="" title="" type="text" value="Test" id="ClientSettingZplShippingLabelPrinter">
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingStatusCancel">Status Update on Cancelled Order after Ready to Ship</label>
+                                                <span>Please select the status to which you want to update the cancelled order after the order has been marked Ready To Ship</span>
+                                                <select name="data[ClientSetting][status_cancel]" class="form-control" placeholder="" title="" id="ClientSettingStatusCancel" required="required">
+                                                    <option value="0" selected="selected">Mark Order status as Cancel Init, if the order is cancelled after it was marked Ready to ship</option>
+                                                    <option value="1">Mark Order status as Cancelled Before Shipping, if the order is cancelled after it was marked Ready to ship</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingQzScanPack">Scan &amp; Pack Print Option</label><span>Select how would you like to print when doing Scan &amp; Pack</span>
+                                                <select name="data[ClientSetting][qz_scan_pack]" class="form-control" placeholder="" title="" id="ClientSettingQzScanPack" required="required">
+                                                <option value="0" selected="selected">Popup Print for Scan &amp; Pack</option>
+                                                <option value="1">Direct Print using QZ for Scan &amp; Pack without Popup</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="ClientSettingQzScanPackPrinter">QZ Scan/Pack Printer Name</label>
+                                                <span>Please enter the printer name to print the document when using Scan &amp; Pack</span>
+                                                <input name="data[ClientSetting][qz_scan_pack_printer]" class="form-control" placeholder="" title="" type="text" value="" id="ClientSettingQzScanPackPrinter">
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingHideCustomerPhone">Hide Customer Phone</label>
+                                                <span>Select the option on if you want to print the customer phone number on labels or not. ( No - Show customer phone number ) </span>
+                                                <select name="data[ClientSetting][hide_customer_phone]" class="form-control" placeholder="" title="" id="ClientSettingHideCustomerPhone" required="required">
+                                                    <option value="0" selected="selected">No - Print Customer Number</option>
+                                                    <option value="1">Hide on Address Label, Retail Label &amp; Invoice</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingHidePiiInReports">Hide Personally Identifiable Information (PII) in Report Exports</label>
+                                                <span>Select the option based on which PII information would be exported in Reports and shown on Order View Page. ( Default - Show PII to all )</span>
+                                                <select name="data[ClientSetting][hide_pii_in_reports]" class="form-control" placeholder="" title="" id="ClientSettingHidePiiInReports" required="required">
+                                                    <option value="0">Yes - Hide PII in all Report Exports / Order View</option>
+                                                    <option value="1">Show PII only in Main (Master User) Account - Report Exports / Order View</option>
+                                                    <option value="2" selected="selected">Show PII to all User Account - Report Exports / Order View</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <!--Inventry-->
+                                        <div class="tab-pane fade in " id="inventory">
+                                            <div class="form-group required">
+                                                <label for="ClientSettingConservativeInventorySync">Perform conservative inventory Sync</label>
+                                                <span>Sometimes system will automatically decide to split the inventory to avoid overselling for fast moving items. <br>In such case, how would you like to split the inventory. Recommended setting: Split Stock Evenly Across All Channels By Sales Priority</span>
+                                                <select name="data[ClientSetting][conservative_inventory_sync]" class="form-control" placeholder="Split Stock Evenly Across All Channels By Sales Priority or Channel Priority&quot;" title="Split Stock Evenly Across All Channels By Sales Priority or Channel Priority&quot;"
+                                                    id="ClientSettingConservativeInventorySync" required="required">
+                                                    <option value="0">Disable, I understand overselling may happen</option>
+                                                    <option value="1" selected="selected">Split Stock Evenly Across All Channels By Sales Priority</option>
+                                                    <option value="2">Split Stock By Channel Priority</option>
+                                                    <option value="3">Force Split Stock by Sales Priority Always</option>
+                                                    <option value="4">Force Split Stock by Channel Priority Always</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingQtyUpdateIncludesBlocked">Product Qty Update Includes Blocked Qty</label>
+                                                <span>Select "Includes Blocked Qty", if you want to update InStock where if you enter 10 as new Qty and there is 2 Blocked Qty, then new InStock would be 8. If you select "Excludes Blocked Qty", then new Instock would be 10. Recommended setting: Depends on Seller preference. Default: Excludes Blocked Qty</span>
+                                                <select name="data[ClientSetting][qty_update_includes_blocked]" class="form-control" placeholder="Split Stock Evenly Across All Channels By Sales Priority or Channel Priority&quot;" title="Split Stock Evenly Across All Channels By Sales Priority or Channel Priority&quot;"
+                                                    id="ClientSettingQtyUpdateIncludesBlocked" required="required">
+                                                    <option value="1">Includes Blocked Qty</option>
+                                                    <option value="0" selected="selected">Excludes Blocked Qty</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingProcessOnlyInStockOrders">Process InStock Orders Only</label>
+                                                <span>Select No, if you want to process orders regardless of InStock Inventory. Recommended setting: Yes. Default: Yes</span>
+                                                <select name="data[ClientSetting][process_only_in_stock_orders]" class="form-control" placeholder="Select Yes, if you want to process orders that are InStock Only" title="Select Yes, if you want to process orders that are InStock Only" id="ClientSettingProcessOnlyInStockOrders"
+                                                    required="required">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingDisableDirectInventoryUpdates">Disable Direct Inventory Updates</label>
+                                                <span>Select Yes, if you wish to prevent direct inventory updates from product/listing views and bulk inventory update files. If yes, then inventory add will occur only through inwarding or purchase or returns and inventory deduction will happen through sales. If you select No, then all modes of inventory updates will be enabled. Recommended Setting: For strict inventory control, select Yes. Default: No</span>
+                                                <select name="data[ClientSetting][disable_direct_inventory_updates]" class="form-control" placeholder="" title="" id="ClientSettingDisableDirectInventoryUpdates" required="required">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingUpdateComboMrpWithChildMrp">Update Combo MRP based on Child MRP</label>
+                                                <span>Select No, if you wish to manage Combo MRP manually. Select Yes, to automatically update MRP of Combo based on the Child Product MRP. (Default: Yes)</span>
+                                                <select name="data[ClientSetting][update_combo_mrp_with_child_mrp]" class="form-control" placeholder="" title="" id="ClientSettingUpdateComboMrpWithChildMrp" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingUpdateComboBrandWithChildBrand">Update Combo Brand based on Child Brand</label>
+                                                <span>Select No, if you wish to manage Combo Brand manually. Select Yes, to automatically update Brand of Combo based on the Child Product Brand. (Default: Yes)</span>
+                                                <select name="data[ClientSetting][update_combo_brand_with_child_brand]" class="form-control" placeholder="" title="" id="ClientSettingUpdateComboBrandWithChildBrand" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingAutoCreateProductCategories">Auto Create Product Categories</label>
+                                                <span>Select No, if you want to manually create product categories and raise error if not found. Recommended setting: Based on seller processes (Default: Yes)</span>
+                                                <select name="data[ClientSetting][auto_create_product_categories]" class="form-control" placeholder="Select Yes, if you want to create product categories, automatically when the product file is uploaded" title="Select Yes, if you want to create product categories, automatically when the product file is uploaded"
+                                                    id="ClientSettingAutoCreateProductCategories" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingManuallyCompletePutaways">Manually Complete Putaways</label>
+                                                <span>Select Yes, if you want to manually close the putaways. Inventory will get added only after putaway is mark completed.
+                                                  Select No if you want the system to automatically mark putaway as complete and credit the InStock inventory right away. Recommended setting: Based on seller processes (Default: No).</span>
+                                                <select name="data[ClientSetting][manually_complete_putaways]" class="form-control" placeholder="" title="" id="ClientSettingManuallyCompletePutaways" required="required">
+                                                  <option value="0" selected="selected">No</option>
+                                                  <option value="1">Yes</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingRequiredRackspaceBulkUpdate">Force RackSpace Requirement in Bulk Inventory Update File</label>
+                                                <span>Select Yes, if you want to us to raise error if RackSpace Name is not provided in bulk inventory update file.
+                                                  Select No if you want the system to automatically use DEFAULT rackspace when rackspace is not provided. Recommended setting: Based on seller processes (Default: No).</span>
+                                                <select name="data[ClientSetting][required_rackspace_bulk_update]" class="form-control" placeholder="" title="" id="ClientSettingRequiredRackspaceBulkUpdate" required="required">
+                                                  <option value="0" selected="selected">No</option>
+                                                  <option value="1">Yes</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingProductStockEditDirectly">Modify Product Stock Directly (applicable on Inventory/Products View)</label>
+                                                <span>Select Yes, if you want to directly edit the product stock instead of rack stock individually.
+                                                  Select No if you want to edit the stock directly at the rack level. Recommended setting: Based on seller processes (Default: Yes).</span>
+                                                <select name="data[ClientSetting][product_stock_edit_directly]" class="form-control" placeholder="" title="" id="ClientSettingProductStockEditDirectly" required="required">
+                                                  <option value="0">No</option>
+                                                  <option value="1" selected="selected">Yes</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingAutoActiveProductOnPurchase">Auto Activate an inactive product on New Purchase entry</label>
+                                                <span>Select Yes, if you want to auto activate an inactive product when a new purchase entry is done. Select No, if you want to keep manual control over it. (Default: Yes)</span>
+                                                <select name="data[ClientSetting][auto_active_product_on_purchase]" class="form-control" placeholder="" title="" id="ClientSettingAutoActiveProductOnPurchase" required="required">
+                                                    <option value="0">No, Keep InActive Products as Inactive</option>
+                                                    <option value="1" selected="selected">Yes, Auto Convert InActive Products to Active on New Purchase Entry</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingEnlargeBarcodeFactor">Adjust the barcode width.</label>
+                                                <span>Enlarge the normal barcode size by a ratio (Default: 1).</span>
+                                                <select name="data[ClientSetting][enlarge_barcode_factor]" class="form-control" placeholder="" title="" id="ClientSettingEnlargeBarcodeFactor" required="required">
+                                                  <option value="1.0" selected="selected">1.0</option>
+                                                  <option value="0.9">0.9</option>
+                                                  <option value="0.8">0.8</option>
+                                                  <option value="1.1">1.1</option>
+                                                  <option value="1.2">1.2</option>
+                                                  <option value="1.3">1.3</option>
+                                                  <option value="1.4">1.4</option>
+                                                  <option value="1.5">1.5</option>
+                                                  <option value="1.6">1.6</option>
+                                                  <option value="1.7">1.7</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingEnlargeQrcodeFactor">Adjust the qrcode width/height (square)</label><span>Enlarge the normal qrcode size by a ratio (Default: 1).</span><select name="data[ClientSetting][enlarge_qrcode_factor]"
+                                                    class="form-control" placeholder="" title="" id="ClientSettingEnlargeQrcodeFactor" required="required">
+                                                    <option value="1.0" selected="selected">1.0</option>
+                                                    <option value="0.9">0.9</option>
+                                                    <option value="0.8">0.8</option>
+                                                    <option value="1.1">1.1</option>
+                                                    <option value="1.2">1.2</option>
+                                                    <option value="1.3">1.3</option>
+                                                    <option value="1.4">1.4</option>
+                                                    <option value="1.5">1.5</option>
+                                                    <option value="1.6">1.6</option>
+                                                    <option value="1.7">1.7</option>
+                                                  </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingEnableGoodBadConversion">Permit conversion of Stock from Good to Bad &amp; Bad to Good</label>
+                                                <span>Select Yes, if you wish to permit the staff to convert the stock from bad to good and good to bad. Default: No</span>
+                                                <select name="data[ClientSetting][enable_good_bad_conversion]" class="form-control" placeholder="" title="" id="ClientSettingEnableGoodBadConversion" required="required">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingPermitSplitAfterPick">Permit Invoice Split after Picklist Complete</label>
+                                                <span>Select Yes, if you want to split invoice after your picked the order. Please note this will cause issues with your rackspace inventory, not recommended to be used. Default: No</span>
+                                                <select name="data[ClientSetting][permit_split_after_pick]" class="form-control" placeholder="" title="" id="ClientSettingPermitSplitAfterPick" required="required">
+                                                    <option value="0" selected="selected">No. Invoice Split is disabled after Picklist is completed. Recommeneded</option>
+                                                    <option value="1">Yes, Permit Invoice Split after Picking the order</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingMultiInventoryWarehouseid">Enter Secondary Dropship Warehouse ID</label>
+                                                <span>Enter the secondary dropship warehouse from which the inventory is to be shared with other warehouse. ( MultiWarehouse Inventory Subscription is needed for this to work )</span>
+                                                <input name="data[ClientSetting][multi_inventory_warehouseid]" class="form-control" placeholder="" title="" type="text" value="0" id="ClientSettingMultiInventoryWarehouseid" required="required">
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingPermitGatepassWithoutStock">Permit GatePass Without Stock Check</label>
+                                                <span>If you want to create GatePass without checking stock, then select yes. If you do not wish to permit GatePass creation in case there is no stock. Default ( No )</span>
+                                                <select name="data[ClientSetting][permit_gatepass_without_stock]" class="form-control" placeholder="" title="" id="ClientSettingPermitGatepassWithoutStock" required="required">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+
+                                        <!--Return-->
+                                        <div class="tab-pane fade in " id="return">
+                                            <div class="form-group required">
+                                                <label for="ClientSettingPostProcessReturnOrders">Post Process Return Orders</label>
+                                                <span>Select No, if you want to credit the accepted return inventory to InStock Inventory instantly. Recommended setting: Based on seller processes (Default: No)</span>
+                                                <select name="data[ClientSetting][post_process_return_orders]" class="form-control" placeholder="Select Yes, if you want to post process the returns, before the accepted return is credited into the InStock Inventory" title="Select Yes, if you want to post process the returns, before the accepted return is credited into the InStock Inventory"
+                                                    id="ClientSettingPostProcessReturnOrders" required="required">
+                                                    <option value="0" selected="selected">No</option>
+                                                    <option value="1">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingPostProcessBadStock">Post Process Bad Stock As well</label>
+                                                <span>Select No, if you want to credit the bad returns to BadStock Inventory instantly. Recommended setting: Based on seller processes (Default: Yes)</span>
+                                                <select name="data[ClientSetting][post_process_bad_stock]" class="form-control" placeholder="Select Yes, if you want to post process the bad returns before it can be credited as BadStock in inventory" title="Select Yes, if you want to post process the bad returns before it can be credited as BadStock in inventory"
+                                                    id="ClientSettingPostProcessBadStock" required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingManuallyCompleteReturnPutaways">Manually Complete Return Putaways</label>
+                                                <span>Select Yes, if you want to manually close the return putaways. Return Inventory will get added only after putaway is mark completed.
+                                                      Select No if you want the system to automatically mark return putaway as complete and credit the InStock inventory right away. Recommended setting: Based on seller processes (Default: Yes).
+                                                      Please note, that this setting will not affect the putaways already generated for returned orders. Such pending putaways, you will have to manually close the putaway</span>
+                                                <select name="data[ClientSetting][manually_complete_return_putaways]" class="form-control" placeholder="" title="" id="ClientSettingManuallyCompleteReturnPutaways" required="required">
+                                                  <option value="0">No</option>
+                                                  <option value="1" selected="selected">Yes</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingMultiWarehouseReturnScanTogether">Multiwarehouse Single Return Scan</label>
+                                                <span>Select Yes, if you want to process the returns of linked warehouses in one go. Select No, if you want to process the returns in respective warehouses. Recommended setting: Based on seller processes (Default: Yes)</span>
+                                                <select name="data[ClientSetting][multi_warehouse_return_scan_together]" class="form-control" placeholder="Select Yes, if you want to process the returns of linked warehouses in one go. Select No, if you want to process the returns in respective warehouses"
+                                                    title="Select Yes, if you want to process the returns of linked warehouses in one go. Select No, if you want to process the returns in respective warehouses" id="ClientSettingMultiWarehouseReturnScanTogether"
+                                                    required="required">
+                                                    <option value="0">No</option>
+                                                    <option value="1" selected="selected">Yes</option>
+                                                    </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingReturnLabelsToPrint">Return Labels to Print</label>
+                                                <span>Select the type of labels that you would like to print if needed, once return is accepted. Default ( Product Barcode Label )</span>
+                                                <select name="data[ClientSetting][return_labels_to_print]" class="form-control" placeholder="" title="" id="ClientSettingReturnLabelsToPrint" required="required">
+                                                    <option value="0" selected="selected">Product Barcode Label</option>
+                                                    <option value="1">Retail Label</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- login -->
+                                        <div class="tab-pane fade in " id="login">
+                                            <div class="form-group required">
+                                                <label for="ClientSettingSendOtpMail">Send OTP Mail for Additional Security</label>
+                                                <select name="data[ClientSetting][send_otp_mail]" class="form-control" placeholder="" title="" id="ClientSettingSendOtpMail" required="required">
+                                                  <option value="0" selected="selected">Do NOT Send Any OTP Mails</option>
+                                                  <option value="1">Send OTP Mails to Master Email</option>
+                                                  <option value="2">Send OTP Mails to Individual User Emails</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group required">
+                                                <label for="ClientSettingAutoLogoutTime">Auto Logout User</label>
+                                                <span>Enter the number of minutes after which the user will logout in case of no activity. Min: 0 ( Sysem Default ), Max: 1440 ( 1 Day ). Recommended : 0</span>
+                                                <input name="data[ClientSetting][auto_logout_time]" class="form-control" placeholder="" title="" type="text" value="0" id="ClientSettingAutoLogoutTime" required="required">
+                                            </div>
+                                        </div>
+                                        <!-- Payment -->
+                                        <div class="tab-pane fade in " id="Payment">
+                                            <div class="form-group required">
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th rowspan="2">OFFER NAME</th>
+                                                            <th rowspan="2">OFFER COST(GST EXTRA) </th>
+                                                            <th rowspan="2">CREDIT POINTS </th>
+                                                            <th rowspan="2">BONUS CREDIT POINTS</th>
+                                                            <th rowspan="2">TOTAL CREDIT</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">0 Bonus Credits - Rs. 2,000 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 2,000.0</td>
+                                                            <td class="amount">Rs. 2,000.0</td>
+                                                            <td class="amount">Rs. 0.0</td>
+                                                            <td class="amount">Rs. 2,000.0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">250 Bonus Credits - Rs. 5,000 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 5,000.0</td>
+                                                            <td class="amount">Rs. 5,000.0</td>
+                                                            <td class="amount">Rs. 250.0</td>
+                                                            <td class="amount">Rs. 5,250.0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">1,000 Bonus Credits - Rs. 10,000 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 10,000.0</td>
+                                                            <td class="amount">Rs. 10,000.0</td>
+                                                            <td class="amount">Rs. 1000.0</td>
+                                                            <td class="amount">Rs. 11,000.0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">2,000 Bonus Credits - Rs. 16,500 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 16,500.0</td>
+                                                            <td class="amount">Rs. 16,500.0</td>
+                                                            <td class="amount">Rs. 2000.0</td>
+                                                            <td class="amount">Rs. 18,500.0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">4,000 Bonus Credits - Rs. 25,000 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 25,000.0</td>
+                                                            <td class="amount">Rs. 25,000.0</td>
+                                                            <td class="amount">Rs. 4000.0</td>
+                                                            <td class="amount">Rs. 29,000.0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">16,500 Bonus Credits - Rs. 50,000 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 50,000.0</td>
+                                                            <td class="amount">Rs. 50,000.0</td>
+                                                            <td class="amount">Rs. 16,500.0</td>
+                                                            <td class="amount">Rs. 66,500.0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">30,000 Bonus Credits - Rs. 75,000 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 75,000.0</td>
+                                                            <td class="amount">Rs. 75,000.0</td>
+                                                            <td class="amount">Rs. 30,000.0</td>
+                                                            <td class="amount">Rs. 105,000.0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">60,000 Bonus Credits - Rs. 1,00,000 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 1,00,000.0</td>
+                                                            <td class="amount">Rs. 1,00,000.0</td>
+                                                            <td class="amount">Rs. 60,000.0</td>
+                                                            <td class="amount">Rs. 160,000.0</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div class="input radio">
+                                                                    <input type="hidden" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId_" value="">
+                                                                    <input type="radio" name="data[RechargeOrder][offer_id]" id="RechargeOrderOfferId1" class="rechargeOfferRadio" value="1">
+                                                                    <label for="RechargeOrderOfferId1">2,00,000 Bonus Credits - Rs. 2,00,000 Plan</label>
+                                                                </div>
+                                                            </td>
+                                                            <td class="amount">Rs. 2,00,000.0</td>
+                                                            <td class="amount">Rs. 2,00,000.0</td>
+                                                            <td class="amount">Rs. 2,00,000.0</td>
+                                                            <td class="amount">Rs. 4,00,000.0</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                        </div>
+                        <center>
+                            <a href="E:\Project\Admin Panel/Payment System.html" class="btn btn-success col-md-6">Save Client Setting</a>
+                        </center>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark ">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js "></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js "></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js "></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js "></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js "></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js "></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js "></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js "></script>
+    <script src="plugins/daterangepicker/daterangepicker.js "></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js "></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js "></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js "></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js "></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js "></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js "></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard3.js "></script>
+</body>
+
+</html>

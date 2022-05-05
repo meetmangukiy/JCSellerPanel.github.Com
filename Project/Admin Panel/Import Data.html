@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JC Seller Panel</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="E:\Project/logo.png" alt="Seller Panel" height="60" width="60">
+        </div>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="file:///E:/Project/Admin%20Panel/Admin%20Panel/Amazon.html" class="nav-link">Home</a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group">
+                                    <select class="form-control" id="searchModel" name="data[f]">
+                        						<option value="order">Order</option>
+                        						<option value="sku">Sku</option>
+                                                <option value="shipment">AWB</option>
+                                                <option value="shipment">Return AWB</option>
+                        						<option value="ListingSku">Listing Sku</option>
+                        						<option value="ListingId">Listing ID</option>
+                        						<option value="name">Buyer Name</option>
+                        						<option value="pincode">Buyer Pincode</option>
+                        						<option value="phone">Buyer Phone</option>
+                        					</select>
+                                    <input type="text" class="form-control ui-autocomplete-input" id="searchTerm" placeholder="Search.." required="" name="data[term]" autocomplete="off">
+                                    <span class="input-group-btn">
+                                  <button class="btn btn-success" type="submit">
+                                    <i class="fa fa-search"></i>
+                                  </button>
+
+                                </span>
+                                </div>
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="E:\Project/user.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Seller Panel</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="E:\Project/logo.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">ABCD1234@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Amazon.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Amazon</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/FlipKart.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>FlipKart</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Meesho.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Meesho</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- shopping cart -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="badge badge-info right"></span>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Quick Dispatch Orders.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Quick Dispatch Orders</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Ship Orders.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Ship Orders</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Customer Returns.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Customer Returns</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- barcode -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-barcode"></i>
+                                    <span class="badge badge-info center"></span>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Inventry.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inventry</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Gst Taxes.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Gst Taxes</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Package Types.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Package Types</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Tables -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-table"></i>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Purchase.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Purchase</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Vendor.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Vendor</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Expense.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Expense</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Advertisement.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p> Add Advertisement</p>
+                                    </a>
+                            </ul>
+                            </li>
+
+                            <!-- sitemap -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-sitemap"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Setup New Channel.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Setup New Channel</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Bank Detail Verified.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Bank Detail Verified</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- chart bar -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Sales & Earnings Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Sales & Earnings Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Returns Received Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Returns Received Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Units Sold Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Units Sold Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Payment Recevied.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Payment Recevied</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Payment Outstanding.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Payment Outstanding</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Accounting Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Accounting Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/DTO.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>DTO </p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/RTO.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>RTO</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- upload -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-upload"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Import Data.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Import Data</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/contact-us.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Contact-Us</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Packing Details.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Packing Details</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper ">
+            <!-- Content Header (Page header) -->
+            <div class="content-header ">
+                <div class="container-fluid ">
+                    <div class="row mb-2 ">
+                        <div class="col-sm-6 ">
+                            <h1 class="m-0 ">Import Data</h1>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-6 ">
+                            <ol class="breadcrumb float-sm-right ">
+                                <li class="breadcrumb-item "><a href="file:///E:/Project/Admin%20Panel/Admin%20Panel/Amazon.html ">Home</a></li>
+                                <li class="breadcrumb-item active "><a href="E:\Project\Admin Panel\pages\examples/login.html">Log Out</a></li>
+                                <li class="breadcrumb-item active "><a href="E:\Project\Admin Panel/Settings.html">Settings</a></li>
+                            </ol>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="col-lg-12">
+                <div class="main-box clearfix">
+                    <header class="main-box-header clearfix">
+                    </header>
+                    <div class="main-box-body clearfix">
+                        <div class="row">
+                            <div class="importDataFileTypes form col-lg-12">
+                                <form action="https://client.omsguru.com/import_data" id="ImportDataFileTypeIndexForm" method="post" accept-charset="utf-8">
+                                    <div style="display:none;">
+                                        <input type="hidden" name="_method" value="POST">
+                                    </div>
+                                    <div class="input select required">
+                                        <label for="ImportDataTypeName">Import Data Type:-</label>
+                                        <p>
+                                            (1). Bulk Create/Update Simple Products
+                                            <center>
+                                                <button class="btn">
+                <i class="fa fa-download"></i>
+                <a href="E:\Project\Admin Panel\Excel Sheet/(1). Bulk CreateUpdate Simple Products.csv">Download!</a>
+                <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (2). Update InStock Qty or Last Purchase Price
+                                            <center>
+                                                <button class="btn">
+               <i class="fa fa-download"></i>
+               <a href="E:\Project\Admin Panel\Excel Sheet/(2). Update InStock Qty or Last Purchase Price.csv">Download!</a>
+               <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (3). Bulk Import Orders for Custom Channel
+                                            <center>
+                                                <button class="btn">
+           <i class="fa fa-download"></i>
+           <a href="E:\Project\Admin Panel\Excel Sheet/(3). Bulk Import Orders for Custom Channel.csv">Download!</a>
+           <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (4). Bulk Import Return Order Data
+                                            <center>
+                                                <button class="btn">
+       <i class="fa fa-download"></i>
+       <a href="E:\Project\Admin Panel\Excel Sheet/(4). Bulk Import Return Order Data.csv">Download!</a>
+       <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (5). Channel Listing Mapping to Product SKU
+                                            <center>
+                                                <button class="btn">
+       <i class="fa fa-download"></i>
+       <a href="E:\Project\Admin Panel\Excel Sheet/(5). Channel Listing Mapping to Product SKU.csv">Download!</a>
+       <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (6). Bulk Create Combo Products
+                                            <center>
+                                                <button class="btn">
+       <i class="fa fa-download"></i>
+       <a href="E:\Project\Admin Panel\Excel Sheet/(6). Bulk Create Combo Products.csv">Download!</a>
+       <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (7). Bulk Upload Channel Commission Percent
+                                            <center>
+                                                <button class="btn">
+       <i class="fa fa-download"></i>
+       <a href="E:\Project\Admin Panel\Excel Sheet/(7). Bulk Upload Channel Commission Percent.csv">Download!</a>
+       <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (8). Fixed TP Payout Update
+                                            <center>
+                                                <button class="btn">
+       <i class="fa fa-download"></i>
+       <a href="E:\Project\Admin Panel\Excel Sheet/(8). Fixed TP Payout Update.csv">Download!</a>
+       <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (9). Mark Product Active or InActive
+                                            <center>
+                                                <button class="btn">
+       <i class="fa fa-download"></i>
+       <a href="E:\Project\Admin Panel\Excel Sheet/ (9). Mark Product Active or InActive.csv">Download!</a>
+       <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (10). Bulk Update Max Listed Qty for ChannelListing
+                                            <center>
+                                                <button class="btn">
+       <i class="fa fa-download"></i>
+       <a href="E:\Project\Admin Panel\Excel Sheet/(10). Bulk Update Max Listed Qty for ChannelListing.csv">Download!</a>
+       <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (11). Bulk Update Channel Listing Status
+                                            <center>
+                                                <button class="btn">
+       <i class="fa fa-download"></i>
+       <a href="E:\Project\Admin Panel\Excel Sheet/(11). Bulk Update Channel Listing Status.csv">Download!</a>
+       <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (12). Unmap Channel Listings in Bulk
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(12). Unmap Channel Listings in Bulk.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (13). Bulk Rename Master Product SKU Codes
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(13). Bulk Rename Master Product SKU Codes.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (14). Export Selected Inventory Data
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(14). Export Selected Inventory Data.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (15). Bulk Update Product Sync Modes
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(15). Bulk Update Product Sync Modes.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <P>
+                                            (16). Bulk Update Problem Invoices
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(16). Bulk Update Problem Invoices.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (17). Bulk Import Channel Advertising Expenses
+                                            <center>
+                                                <button class="btn">
+         <i class="fa fa-download"></i>
+         <a href="E:\Project\Admin Panel\Excel Sheet/(17). Bulk Import Channel Advertising Expenses.csv">Download!</a>
+         <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (18). Delete Channel Listings in Bulk
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(18). Delete Channel Listings in Bulk.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (19). Bulk Update Virtual Stock
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(19). Bulk Update Virtual Stock.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (20). Bulk Create Product Groups
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(20). Bulk Create Product Groups.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (21). Export Mapped Products
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(21). Export Mapped Products.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (22). Bulk Update Product Group Virtual Stock
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(22). Bulk Update Product Group Virtual Stock.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (23). Import Custom Payment
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(23). Import Custom Payment.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (24). Custom Channel Discount Promotions
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(24). Custom Channel Discount Promotions.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (25). Export Mapped Listings for Products
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(25). Export Mapped Listings for Products.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (26). Bulk Generate Barcode Labels
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(26). Bulk Generate Barcode Labels.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (27). Upload Channel Listing
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(27). Upload Channel Listing.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (28). Bulk Update Order Details
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(28). Bulk Update Order Details.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (29). Bulk Update SKU Stock
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(29). Bulk Update SKU Stock.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>(30). Update GST as Per TCS
+                                            <center>
+                                                <button class="btn">
+                                                <i class="fa fa-download"></i>
+                                                <a href="E:\Project\Admin Panel\Excel Sheet/(30). Update GST as Per TCS.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (31). Import Item BarCodes
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(31). Import Item BarCodes.csv.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (32). Bulk Convert Bad to Good or Good to Bad
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(32). Bulk Convert Bad to Good or Good to Bad.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (33). Bulk Update ItemBarcode for an Invoice
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(33). Bulk Update ItemBarcode for an Invoice.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (34). Bulk Accept Returns & Create Credit Notes
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(34). Bulk Accept Returns & Create Credit Notes.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                        <p>
+                                            (35). Bulk Update Listing Sync Status
+                                            <center>
+                                                <button class="btn">
+        <i class="fa fa-download"></i>
+        <a href="E:\Project\Admin Panel\Excel Sheet/(35). Bulk Update Listing Sync Status.csv">Download!</a>
+        <input type="file">Upload From CSV File</button>
+                                                </button>
+                                            </center>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="fileFieldDescription">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark ">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js "></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js "></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js "></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js "></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js "></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js "></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js "></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js "></script>
+    <script src="plugins/daterangepicker/daterangepicker.js "></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js "></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js "></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js "></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js "></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js "></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js "></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard3.js"></script>
+</body>
+
+</html>

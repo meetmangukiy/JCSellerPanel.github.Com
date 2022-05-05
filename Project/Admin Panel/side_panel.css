@@ -1,0 +1,208 @@
+/* normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+.sidepanel {
+    position: relative;
+    font-family: "robotoRegular";
+}
+
+.sidepanel.open .sidepaneloverlay {
+    display: block;
+    -moz-transform: scale3d(1, 1, 1);
+    -o-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+}
+
+.sidepanel.open .sidepanelin {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.38)
+}
+
+.sidepanel.rightside .sidepanelin {
+    left: 100% !important;
+    -moz-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -webkit-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.sidepanel.rightside.open .sidepanelin {
+    -moz-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.sidepaneloverlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 101;
+    background: rgba(12, 12, 12, 0.33);
+    width: 100%;
+    height: 100%;
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    display: none;
+    -webkit-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+    -moz-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+    -ms-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+    -o-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+    transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+}
+
+.sidepanelin {
+    position: fixed !important;
+    top: 0;
+    bottom: 0;
+    z-index: 110;
+    background: #fff;
+    min-width: 224px;
+    -webkit-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+    -moz-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+    -ms-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+    -o-transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+    transition: transform 0.5s cubic-bezier(0.22, 0.99, 0.68, 0.98);
+}
+
+.sidepanelin .sd-loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.sidepanelin .sd-loader img {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    position: absolute;
+}
+
+.bigwidth .sidepaneloverlay {
+    background: rgba(238, 238, 238, 0.7);
+}
+
+.bigwidth .sidepanelin {
+    width: 30%;
+    min-width: 600px;
+    max-width: 900px;
+    height: 100%;
+}
+
+.bigwidth.open .sidepanelin {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bigwidth.open .sidepanelin>.close {
+    left: -36px;
+}
+
+.bigwidth .sidepanelin>.close {
+    background: #FF0000;
+    opacity: 0.8;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    border-radius: 0;
+    display: table;
+}
+
+.bigwidth .sidepanelin>.close i {
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.bigwidth .sidepanelin>.close:hover {
+    background: #ddd;
+    color: #000;
+}
+
+.bigwidth .sidepanelin>.close:hover i {
+    color: #000
+}
+
+.sidepanel .close {
+    color: #bdc1c1;
+    float: right;
+    font-size: 15px;
+    position: relative;
+    z-index: 100;
+    width: 36px;
+    height: 34px;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 60px;
+}
+
+.sidepanel .close:focus {
+    color: #000;
+    cursor: pointer;
+    background: rgba(12, 12, 12, 0.07);
+}
+
+.sidepanel .close:hover {
+    color: #000;
+    cursor: pointer;
+    background: rgba(12, 12, 12, 0.07);
+}
+
+.sidepanelin .sidepanelin-heading {
+    border-bottom: 1px solid rgba(12, 12, 12, 0.1);
+    height: 56px
+}
+
+.sidepanelin .sidepanelin-heading h3 {
+    font-size: 22px;
+    padding: 15px;
+    /*margin-left: 20px;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* max-width: 92%;*/
+}
+
+.sidepanelin-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+}
+
+.ie8 .sidepanel.rightside .sidepanelin,
+.ie9 .sidepanel.rightside .sidepanelin {
+    left: auto;
+    right: -99999px;
+}
+
+.ie8 .sidepanel.rightside.open .sidepanelin,
+.ie9 .sidepanel.rightside.open .sidepanelin,
+.safari-mac .sidepanel.rightside.open .sidepanelin {
+    right: 0;
+}
+
+.ie8 .sidepanel .sidepaneloverlay {
+    background: #F3F3F3;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+}
+
+.sidepanelin-body {
+    padding: 15px;
+}
+
+.sidepanelin-content iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    position: relative;
+}

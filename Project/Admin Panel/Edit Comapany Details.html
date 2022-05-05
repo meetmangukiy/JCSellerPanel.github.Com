@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JC Seller Panel</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader flex-column justify-content-center align-items-center">
+            <img class="animation__shake" src="E:\Project/logo.png" alt="Seller Panel" height="60" width="60">
+        </div>
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="E:\Project\Admin Panel/Amazon.html" class="nav-link">Home</a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <!-- Navbar Search -->
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                        <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                        <form class="form-inline">
+                            <div class="input-group input-group-sm">
+                                <div class="input-group">
+                                    <select class="form-control" id="searchModel" name="data[f]">
+                        						<option value="order">Order</option>
+                        						<option value="sku">Sku</option>
+                                                <option value="shipment">AWB</option>
+                                                <option value="shipment">Return AWB</option>
+                        						<option value="ListingSku">Listing Sku</option>
+                        						<option value="ListingId">Listing ID</option>
+                        						<option value="name">Buyer Name</option>
+                        						<option value="pincode">Buyer Pincode</option>
+                        						<option value="phone">Buyer Phone</option>
+                        					</select>
+                                    <input type="text" class="form-control ui-autocomplete-input" id="searchTerm" placeholder="Search.." required="" name="data[term]" autocomplete="off">
+                                    <span class="input-group-btn">
+                                  <button class="btn btn-success" type="submit">
+                                    <i class="fa fa-search"></i>
+                                  </button>
+
+                                </span>
+                                </div>
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="E:\Project/user.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">Seller Panel</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="E:\Project/logo.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">ABCD1234@gmail.com</a>
+                    </div>
+                </div>
+
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Amazon.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Amazon</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/FlipKart.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>FlipKart</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Meesho.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Meesho</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- shopping cart -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="badge badge-info right"></span>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Quick Dispatch Orders.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Quick Dispatch Orders</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Ship Orders.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Ship Orders</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Customer Returns.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Customer Returns</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- barcode -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-barcode"></i>
+                                    <span class="badge badge-info center"></span>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Inventry.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inventry</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Gst Taxes.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Gst Taxes</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Package Types.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Package Types</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Tables -->
+                        <li class="nav-item">
+                            <center>
+                                <a href="#" class="nav-link">
+                                    <i class="nav-icon fas fa-table"></i>
+                                </a>
+                            </center>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Purchase.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Purchase</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Vendor.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Vendor</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Expense.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Add Expense</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="E:\Project\Admin Panel/Add Advertisement.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p> Add Advertisement</p>
+                                    </a>
+                            </ul>
+                            </li>
+
+                            <!-- sitemap -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-sitemap"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Setup New Channel.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Setup New Channel</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Bank Detail Verified.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Bank Detail Verified</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- chart bar -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Sales & Earnings Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Sales & Earnings Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Returns Received Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Returns Received Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Units Sold Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Units Sold Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Payment Recevied.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Payment Recevied</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Payment Outstanding.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Payment Outstanding</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Accounting Report.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Accounting Report</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/DTO.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>DTO </p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/RTO.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>RTO</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- upload -->
+                            <li class="nav-item">
+                                <center>
+                                    <a href="#" class="nav-link">
+                                        <i class="fa fa-upload"></i>
+                                    </a>
+                                </center>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Import Data.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Import Data</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/contact-us.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Contact-Us</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="E:\Project\Admin Panel/Packing Details.html" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Packing Details</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper ">
+            <!-- Content Header (Page header) -->
+            <div class="content-header ">
+                <div class="container-fluid ">
+                    <div class="row mb-2 ">
+                        <div class="col-sm-6 ">
+                            <h1 class="m-0 ">Edit Company List</h1>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-sm-6 ">
+                            <ol class="breadcrumb float-sm-right ">
+                                <li class="breadcrumb-item "><a href="file:///E:/Project/Admin%20Panel/Admin%20Panel/Amazon.html ">Home</a></li>
+                                <li class="breadcrumb-item active "><a href="E:\Project\Admin Panel\pages\examples/login.html">Log Out</a></li>
+                                <li class="breadcrumb-item active "><a href="E:\Project\Admin Panel/Settings.html">Settings</a></li>
+                            </ol>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Edit Company Details:</th>
+                        <th rowspan="2">Pickup Address:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                          <div class="form-group required">
+                          <label for="CompanyName">Company Name</label>
+                          <input name="data[Company][name]" class="form-control" placeholder="Enter Company Name" maxlength="45" type="text" value="Jahanvi Creation" id="CompanyName" required="required">
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-group required">
+                            <label for="CompanyPickupAddress1">Address Line 1:-</label>
+                            <input name="data[Company][pickup_address1]" class="form-control" placeholder="Enter Address Line 1" maxlength="100" type="text" value="A-16, 1 st FLOOR, PATEL NAGAR," id="CompanyPickupAddress1" required="required">
+                          </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyPickupAddress1">Address Line 1:-</label>
+                          <input name="data[Company][pickup_address1]" class="form-control" placeholder="Enter Address Line 1" maxlength="100" type="text" value="A-16, 1 st FLOOR, PATEL NAGAR," id="CompanyPickupAddress1" required="required">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyPickupAddress1">Address Line 2:-</label>
+                          <input name="data[Company][pickup_address2]" class="form-control" placeholder="Enter Address Line 2" maxlength="100" type="text" value="A.K.ROAD, VARACHHA," id="CompanyPickupAddress2" required="required">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyCity">City:-</label>
+                          <input name="data[Company][city]" class="form-control" placeholder="Enter City" maxlength="45" type="text" value="SURAT" id="CompanyCity" required="required">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyCity">City:-</label>
+                          <input name="data[Company][city]" class="form-control" placeholder="Enter City" maxlength="45" type="text" value="SURAT" id="CompanyCity" required="required">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyCity">State:-</label>
+                          <input name="data[Company][State]" class="form-control" placeholder="Enter State" maxlength="45" type="text" value="GUJARAT" id="CompanyCity" required="required">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyCity">State:-</label>
+                          <input name="data[Company][State]" class="form-control" placeholder="Enter State" maxlength="45" type="text" value="GUJARAT" id="CompanyCity" required="required">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyZipCode">Pin Code:-</label>
+                          <input name="data[Company][Pin_Code]" class="form-control" placeholder="Enter Pincode" maxlength="10" type="text" value="395008" id="CompanyZipCode" required="required">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyZipCode">Pin Code:-</label>
+                          <input name="data[Company][Pin_Code]" class="form-control" placeholder="Enter Pincode" maxlength="10" type="text" value="395008" id="CompanyZipCode" required="required">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="form-group">
+                          <label for="CompanyTelephone">Contact Number:-</label>
+                          <input name="data[Company][telephone]" class="form-control" placeholder="Enter Conctact Number" maxlength="20" type="tel" value="09825299190" id="CompanyTelephone">
+                      </div>
+                      </td>
+                      <td>
+                        <div class="required">
+                          <b>Digital Signature</b>
+                          <br><span>You May Upload Png OR Jpg Images Only.</span>
+                        </div>
+                        <div class="fileupload-buttonbar">
+                          <div>
+                              <span class="btn btn-success fileinput-button">
+                                  <i class="icon-plus icon-white"></i>
+                                  <span>Upload Image</span>
+                                  <input type="file" name="files[]" multiple="">
+                              </span>
+                              <button type="button" class="btn btn-danger delete">
+                                  <i class="icon-trash icon-white"></i>
+                                  <span>Delete</span>
+                              </button>
+                          </div>
+                      </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="form-group">
+                          <label for="CompanySiteUrl">Company Site URL</label>
+                          <input name="data[Company][site_url]" class="form-control" placeholder="Enter Company Website URL" maxlength="255" type="text" value="" id="CompanySiteUrl">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="required">
+                          <b>Company Logo</b>
+                          <br><span>You May Upload Png OR Jpg Images Only.</span>
+                        </div>
+                        <div class="fileupload-buttonbar">
+                          <div>
+                              <span class="btn btn-success fileinput-button">
+                                  <i class="icon-plus icon-white"></i>
+                                  <span>Upload Image</span>
+                                  <input type="file" name="files[]" multiple="">
+                              </span>
+                              <button type="button" class="btn btn-danger delete">
+                                  <i class="icon-trash icon-white"></i>
+                                  <span>Delete</span>
+                              </button>
+                          </div>
+                      </div>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>
+                        <div class="form-group required">
+                          <label for="CompanyGstinNumber">GSTIN Registration Number</label>
+                          <input name="data[Company][gstin_number]" class="form-control" placeholder="Enter GSTIN Registration Number" maxlength="45" type="text" value="24AFPPM4880G14" id="CompanyGstinNumber" required="required">
+                        </div>
+                      </td>
+                      <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark ">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js "></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js "></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js "></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js "></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js "></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js "></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js "></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js "></script>
+    <script src="plugins/daterangepicker/daterangepicker.js "></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js "></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js "></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js "></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js "></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js "></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js "></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard3.js"></script>
+</body>
+
+</html>
+</html>
